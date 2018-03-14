@@ -5,7 +5,7 @@
         <attribute name="nameCourse" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subjectCourse" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ECStudent" inverseName="courses" inverseEntity="ECStudent" syncable="YES"/>
-        <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ECTeacher" inverseName="courses" inverseEntity="ECTeacher" syncable="YES"/>
+        <relationship name="teachers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ECTeacher" inverseName="courses" inverseEntity="ECTeacher" syncable="YES"/>
     </entity>
     <entity name="ECStudent" representedClassName="ECStudent" syncable="YES" codeGenerationType="class">
         <attribute name="birthDayStudent" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,7 +19,7 @@
         <attribute name="degreeTeacher" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstNameTeacher" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastNameTeacher" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ECCourse" inverseName="teacher" inverseEntity="ECCourse" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ECCourse" inverseName="teachers" inverseEntity="ECCourse" syncable="YES"/>
     </entity>
     <elements>
         <element name="ECCourse" positionX="-153" positionY="72" width="128" height="118"/>
